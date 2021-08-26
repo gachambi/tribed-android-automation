@@ -1,0 +1,27 @@
+{
+  "name": "tribed-android-automation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tests": "npx wdio ./wdio.conf.js --suite signup ; allure generate _results_  ; allure serve _results_/allure-raw"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@wdio/cli": "^5.16.10",
+    "allure": "0.0.0",
+    "allure-commandline": "^2.13.8",
+    "dotenv": "^10.0.0",
+    "wdio-video-reporter": "^3.1.2"
+  },
+  "devDependencies": {
+    "@wdio/local-runner": "^5.16.10",
+    "@wdio/mocha-framework": "^5.16.10",
+    "@wdio/selenium-standalone-service": "^5.16.10",
+    "@wdio/spec-reporter": "^5.16.5",
+    "@wdio/sync": "^5.16.10",
+    "chai": "^4.2.0"
+  }
+}
