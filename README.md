@@ -12,7 +12,7 @@ HOW TO GET STARTED
 
 7.Open android studio 8.Click configure button at the bottom of the first menu you see. Select "AVD manager"
 
-9.Click the leftmost down-facing chevrolet of the "pixel 2" option 10.Click cold boot now
+9.Click the leftmost down-facing chevron of the "pixel 2" option 10.Click cold boot now
 
 START RUNNING YOUR TESTS
-Go back to your terminal to run " npm run tests"
+Go back to your terminal to run "npm run tests"

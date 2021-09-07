@@ -1,0 +1,23 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1630751372382' stop='1630751389104'>
+    <name>signup feature</name>
+    <title>signup feature</title>
+    <test-cases>
+        <test-case start='1630751372650' status='passed' stop='1630751389099'>
+            <name>should be able to sign up for tribed</name>
+            <title>should be able to sign up for tribed</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='device' value='Pixel 2 11-11'/>
+            </parameters>
+            <steps/>
+            <attachments>
+                <attachment title='Execution video' source='8ce7d396-7046-426f-b9da-c500e5e9f59f-attachment.mp4' type='video/mp4' size='179'/>
+            </attachments>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
