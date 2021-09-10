@@ -4,12 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "tests": "npx wdio ./wdio.conf.js --suite signup ; allure generate _results_  ; allure serve _results_/allure-raw"
+    "tests": "npx wdio ./wdio.conf.js --suite signup ; allure generate _results_  ; allure serve _results_/allure-raw",
+    "createProfile": "npx wdio ./wdio.conf.js --suite createProfile ; allure generate _results_  ; allure serve _results_/allure-raw"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@percy/webdriverio": "^2.0.0",
     "@wdio/cli": "^5.16.10",
     "allure": "0.0.0",
     "allure-commandline": "^2.13.8",
