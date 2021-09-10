@@ -72,7 +72,6 @@ describe("create profile", () => {
       //go to my work style page
 
       myWorkStylePage.hybridOpt.click();
-      // myWorkStylePage.officeLocationExpandBTN[0].click()
       driver.touchPerform([{ action: "tap", options: { x: 800, y: 1000 } }]);
       myWorkStylePage.within5MilesOpt.click();
       myWorkStylePage.officeLocationSaveBTN.click();
@@ -86,17 +85,11 @@ describe("create profile", () => {
       myWorkStylePage.entrylevelOpt.click();
       driver.pause(3000);
       driver.touchPerform([{ action: "tap", options: { x: 174, y: 855 } }]);
-      //   driver.touchAction([
-      //     { action: 'tap', x: 174, y: 860 }
-      // ])
       myWorkStylePage.poundOpt.click();
       myWorkStylePage.minsalaryPerYearSaveBTN.click();
       driver.pause(2000);
       driver.touchPerform([{ action: "tap", options: { x: 995, y: 855 } }]);
 
-      //   driver.touchAction([
-      //     { action: 'tap', x: 995, y: 860 },
-      // ])
       myWorkStylePage.minsalaryPerYearOpt.click();
       myWorkStylePage.minsalaryPerYearSaveBTN.click();
       myWorkStylePage.minsalaryPerYearForm.setValue(1000);
