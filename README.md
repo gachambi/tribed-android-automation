@@ -15,4 +15,7 @@ HOW TO GET STARTED
 9.Click the leftmost down-facing chevron of the "pixel 2" option 10.Click cold boot now
 
 START RUNNING YOUR TESTS
-Go back to your terminal to run "npm run tests"
+Go back to your terminal to run " npm run <testname>".
+The currently available tests are :
+1. signup
+2. create_profile
