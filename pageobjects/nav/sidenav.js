@@ -1,15 +1,20 @@
+const PO = require("../po")
+
 class Sidenav {
-  get() {
-    return $("//");
+  get createProfileBTN() {
+    return new PO(480, 418)
   }
-  get() {
-    return $("//");
+  get companiesIFollowBTN() {
+    return new PO(410, 735)
   }
-  get() {
-    return $("//");
+  get companyRevealsBTN() {
+    return new PO(395, 840)
   }
-  get() {
-    return $("//");
+  get termsAndConditions() {
+    return new PO(230, 1440)
+  }
+  get logoutBTN() {
+    return new PO(170, 1645)
   }
 }
 

@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "tests": "npx wdio ./wdio.conf.js --suite signup ; allure generate _results_  ; allure serve _results_/allure-raw",
-    "createProfile": "npx wdio ./wdio.conf.js --suite createProfile ; allure generate _results_  ; allure serve _results_/allure-raw"
+    "createProfile": "npx wdio ./wdio.conf.js --suite createProfile ; allure generate _results_  ; allure serve _results_/allure-raw",
+    "candidate_sign_up": "npx wdio ./wdio.conf.js --suite candidate_sign_up ; allure generate _results_  ; allure serve _results_/allure-raw"
   },
   "keywords": [],
   "author": "",

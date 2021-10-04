@@ -1,10 +1,15 @@
+const PO = require("../po");
+
 class TopNav {
-  get profileAndNotificationOpt() {
-    return $$('//android.view.ViewGroup[@index="0"]');
+  get profile() {
+    return new PO(105, 135);
   }
-  get logoOpt() {
-    return $('//android.view.ViewGroup[@index="1"]');
+  get logoYolba() {
+    return new PO(550, 135);
+  }
+  get notificationOpt(){
+    return new PO(975, 135)
   }
 }
 
-module.exports = TopNav();
+module.exports = new TopNav();

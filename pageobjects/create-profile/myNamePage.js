@@ -1,4 +1,4 @@
-const { assert } = require("chai");
+const PO = require("../po");
 
 class MyNamePage {
   get identifier() {
@@ -12,6 +12,11 @@ class MyNamePage {
   }
   get nextBTN() {
     return $('//android.widget.TextView[@text="Next"]');
+  }
+  get xBTN(){ return new PO(1010,90)}
+
+  get updateChangesBTN() {
+    return $('//android.widget.TextView[@text="Update changes"]');
   }
 
   checkpage() {

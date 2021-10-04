@@ -1,8 +1,7 @@
+const PO = require("./po")
+
 class LandingPage {
-  get skipBTN() {
-    return $('//android.widget.TextView[@text="Skip"]');
-  }
-  // get (){return $('//')}
+    get skipBTN(){ return new PO(972,1707)}
 }
 
-module.exports = new LandingPage();
+module.exports = new LandingPage()
