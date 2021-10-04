@@ -13,6 +13,9 @@ class Sidenav {
   get termsAndConditions() {
     return new PO(230, 1440)
   }
+  get xBTN(){
+    return new PO(790, 120)
+  }
   get logoutBTN() {
     return new PO(170, 1645)
   }

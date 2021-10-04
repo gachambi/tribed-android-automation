@@ -1,5 +1,6 @@
 const { assert } = require("chai")
 const data = require("../../data/creds")
+const PO = require("../po")
 
 class PreviewPage{
     get editIcon(){
@@ -8,7 +9,9 @@ class PreviewPage{
     get nameField(){
         return $('//android.widget.TextView[@index="1"]')
     }
-
+    get publishProfile(){
+        return new PO(500, 1600)
+    }
     checkIfNameIsEdited(){
         if(typeof this.nameField.getText() == String){
             assert(()=>{

@@ -14,7 +14,9 @@ class MyNamePage {
     return $('//android.widget.TextView[@text="Next"]');
   }
   get xBTN(){ return new PO(1010,90)}
-
+  get progressBar(){
+    return $('//android.widget.TextView[@text="4"]')
+  }
   get updateChangesBTN() {
     return $('//android.widget.TextView[@text="Update changes"]');
   }
