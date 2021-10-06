@@ -20,3 +20,4 @@ The currently available tests are :
 1. signup
 2. create_profile
 3. candidate_sign_up
+4. find_job
