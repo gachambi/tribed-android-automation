@@ -31,6 +31,27 @@ const loginToYolba = ({user}) =>{
             tapXbtncreateprofile()
             driver.pause(3000)
         }
+        case "userWithProfile":{
+          driver.pause(8000)
+            landingPage.skipBTN.click()
+            driver.pause(3000)
+            driver.touchPerform([
+                { action: "press", options: { x: 500, y: 1280 } },
+                { action: "wait", options: { ms: 1000 } },
+                { action: "moveTo", options: { x: 500, y: 347 } },
+                { action: "release" },
+            ]);
+            driver.pause(3000);
+            registerPage.loginOptBTN.click();
+            //login
+            loginPage.emailForm.setValue(data.userWithProfile);
+            loginPage.passwordForm.setValue(data.Password);
+            loginPage.findMyTribeBTN.click();
+            // tapping the XBTN
+            driver.pause(6000)
+            tapXbtncreateprofile()
+            driver.pause(3000)
+        }
         default :
         break
     }

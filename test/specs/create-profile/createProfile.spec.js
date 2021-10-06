@@ -7,27 +7,12 @@ const skillsAndExperience = require("../../../pageobjects/create-profile/skillsA
 const landingPage = require("../../../pageobjects/landingPage");
 const loginPage = require("../../../pageobjects/loginPage");
 const registerPage = require("../../../pageobjects/registerPage");
+const { loginToYolba } = require("../../../support/candidate_sign_up_helpers");
 
 describe("create profile", () => {
   it("should create a profile", () => {
-    driver.pause(12000);
-    if (landingPage.skipBTN.isExisting()) {
-      landingPage.skipBTN.click();
-    }
-
-    // go to login page
-    driver.touchPerform([
-      { action: "press", options: { x: 500, y: 1280 } },
-      { action: "wait", options: { ms: 1000 } },
-      { action: "moveTo", options: { x: 500, y: 347 } },
-      { action: "release" },
-    ]);
-    driver.pause(5000);
-    registerPage.loginOptBTN.click();
-    //login
-    loginPage.emailForm.setValue(data.UserEmail);
-    loginPage.passwordForm.setValue(data.Password);
-    loginPage.findMyTribeBTN.click();
+    
+    loginToYolba({user:"admin"})
 
     //check for my name page
     driver.pause(12000);

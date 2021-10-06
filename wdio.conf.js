@@ -30,7 +30,8 @@ exports.config = {
     signup: ["./test/specs/signup/signup.spec.js"],
     createProfile: ["./test/specs/create-profile/createProfile.spec.js"],
     visual_testing: ["./test/specs/visual-testing/main.spec.js"],
-    candidate_sign_up: ["./test/specs/candidate_sign_up/candidate_sign_up.spec.js"]
+    candidate_sign_up: ["./test/specs/candidate_sign_up/candidate_sign_up.spec.js"],
+    find_job: ["./test/specs/findJobs/findJobs.spec.js"]
   },
   //
   // ============
