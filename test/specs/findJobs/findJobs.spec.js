@@ -8,6 +8,7 @@ describe('find jobs under listings', ()=>{
     it('should Verify user can go to the search page', ()=>{
         loginToYolba({user:"userWithProfile"})
         bottomNav.search.click()
+        driver.pause(3000)
         assert(searchPage.searchInput.isExisting(), "search page is not existing")
 
     })
@@ -19,8 +20,8 @@ describe('find jobs under listings', ()=>{
     it('should Verify that a user can filter search results based on personal preferences', ()=>{
         searchPage.companiesOrJobsToggle.click()
         searchPage.filterOptionsBTN.click()
-        driver.pause(5000)
-        searchPage.filtersCompanyCultureOpt.click()
+        driver.pause(9000)
+        // searchPage.filtersCompanyCultureOpt.click()
         searchPage.filtersCultureSelect1Opt.click()
         searchPage.filtersShowCompaniesBTN.click()
         assert($('//android.widget.TextView[@text="No results found"]'), "user cannot filter job search results")

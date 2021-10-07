@@ -1,6 +1,15 @@
 const { join } = require("path");
 const video = require("wdio-video-reporter");
 
+const saveTestVideo = (recordingAsBase64Str, vidName,dateAsString=new Date().toISOString()) =>{
+  let videoBinary = Buffer.from(recordingAsBase64Str, 'base64')
+  let [anc] = dateAsString.split('T')
+  const path = `./recordings/${anc}`
+  if (!fs.existsSync(path)) {
+      fs.mkdirSync(path)
+  }
+  fs.writeFileSync(`./recordings/${anc}/${vidName}.mp4`, videoBinary)
+}
 exports.config = {
   //
   // ====================
@@ -195,8 +204,9 @@ exports.config = {
    * Hook that gets executed before the suite starts
    * @param {Object} suite suite details
    */
-  // beforeSuite: function (suite) {
-  // },
+  beforeSuite: function (suite) {
+    driver.startRecordingScreen()
+  },
   /**
    * Function to be executed before a test (in Mocha/Jasmine) starts.
    */
@@ -231,8 +241,10 @@ exports.config = {
    * Hook that gets executed after the suite has ended
    * @param {Object} suite suite details
    */
-  // afterSuite: function (suite) {
-  // },
+  afterSuite: function (suite) {
+    const recordingAsBase64Str = driver.stopRecordingScreen()
+        saveTestVideo(recordingAsBase64Str, feature.tags[0].name)
+  },
   /**
    * Runs after a WebdriverIO command gets executed
    * @param {String} commandName hook command name

@@ -11,7 +11,7 @@ const { tapXbtncreateprofile } = require("./general_functions");
 const loginToYolba = ({user}) =>{
     switch(user){
         case "admin":{
-            driver.pause(8000)
+            driver.pause(10000)
             landingPage.skipBTN.click()
             driver.pause(3000)
             driver.touchPerform([
@@ -32,7 +32,7 @@ const loginToYolba = ({user}) =>{
             driver.pause(3000)
         }
         case "userWithProfile":{
-          driver.pause(8000)
+          driver.pause(10000)
             landingPage.skipBTN.click()
             driver.pause(3000)
             driver.touchPerform([
