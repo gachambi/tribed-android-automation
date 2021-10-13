@@ -243,7 +243,7 @@ exports.config = {
    */
   afterSuite: function (suite) {
     const recordingAsBase64Str = driver.stopRecordingScreen()
-        saveTestVideo(recordingAsBase64Str, feature.tags[0].name)
+        saveTestVideo(recordingAsBase64Str, "RECORDING")
   },
   /**
    * Runs after a WebdriverIO command gets executed
